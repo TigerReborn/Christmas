@@ -12,8 +12,6 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class ChristmasCore extends JavaPlugin {
 
-    private static ChristmasCore instance;
-
     @Override
     public void onEnable() {
         instance = this;
@@ -25,12 +23,7 @@ public class ChristmasCore extends JavaPlugin {
         ChristmasCreator.getInstance().registerPhase(new ParticlePhase());
     }
 
-    @Override
-    public void onDisable() {
-        instance = null;
-    }
-
     public static ChristmasCore getInstance() {
-        return instance;
+        return JavaPlugin.getPlugin(ChristmasCore.class);
     }
 }
