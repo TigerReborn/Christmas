@@ -35,46 +35,15 @@ public class TreePhase extends ChristmasSpawner {
         //TODO Make layer below each layer be the "holder" of the above layer.
         //eg the second layer's mobs are the passangers of the first layer's mobs.
 
-        for (Location l : firstLayer) {
-            MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)location.getWorld()).getHandle()), l, true);
-        }
-
-        for (Location l : secondLayer) {
-            MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)location.getWorld()).getHandle()), l, true);
-        }
-
-        for (Location l : thirdLayer) {
-            MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)location.getWorld()).getHandle()), l, true);
-        }
-
-        for (Location l : fourthLayer) {
-            MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)location.getWorld()).getHandle()), l, true);
-        }
-
-        for (Location l : fifthLayer) {
-            MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)location.getWorld()).getHandle()), l, true);
-        }
-
-        for (Location l : sixthLayer) {
-            MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)location.getWorld()).getHandle()), l, true);
-        }
-
-        for (Location l : seventhLayer) {
-            MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)location.getWorld()).getHandle()), l, true);
-        }
-
-        for (Location l : eighthLayer) {
-            MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)location.getWorld()).getHandle()), l, true);
-        }
-
-        for (Location l : ninthLayer) {
-            MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)location.getWorld()).getHandle()), l, true);
-        }
-
-        for (Location l : tenthLayer) {
-            MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)location.getWorld()).getHandle()), l, true);
-        }
-
-        System.out.println("DONE");
+        firstLayer.stream().forEach(l -> MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)l.getWorld()).getHandle()), l, true));
+        secondLayer.stream().forEach(l -> MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)l.getWorld()).getHandle()), l, true));
+        thirdLayer.stream().forEach(l -> MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)l.getWorld()).getHandle()), l, true));
+        fourthLayer.stream().forEach(l -> MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)l.getWorld()).getHandle()), l, true));
+        fifthLayer.stream().forEach(l -> MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)l.getWorld()).getHandle()), l, true));
+        sixthLayer.stream().forEach(l -> MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)l.getWorld()).getHandle()), l, true));
+        seventhLayer.stream().forEach(l -> MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)l.getWorld()).getHandle()), l, true));
+        eighthLayer.stream().forEach(l -> MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)l.getWorld()).getHandle()), l, true));
+        ninthLayer.stream().forEach(l -> MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)l.getWorld()).getHandle()), l, true));
+        tenthLayer.stream().forEach(l -> MobManager.getInstance().spawnMob(new ChristmasSnowman(((CraftWorld)l.getWorld()).getHandle()), l, true));
     }
 }
