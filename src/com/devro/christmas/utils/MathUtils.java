@@ -6,11 +6,18 @@ import org.bukkit.util.Vector;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Programmed by DevRo_ on 22/12/14.
  */
 public class MathUtils {
+
+    private static Random random = new Random();
+
+    public static int r(int i) {
+        return random.nextInt(i);
+    }
 
     //Author bobacadodl
     public static List<Location> getCylinder(Location location, double radiusX, double radiusZ, int height, boolean filled) {

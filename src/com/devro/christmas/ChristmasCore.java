@@ -1,6 +1,7 @@
 package com.devro.christmas;
 
 import com.devro.christmas.creator.ChristmasCreator;
+import com.devro.christmas.creator.phases.ParticlePhase;
 import com.devro.christmas.creator.phases.TreePhase;
 import com.devro.christmas.mobs.MobManager;
 import org.bukkit.Bukkit;
@@ -21,6 +22,7 @@ public class ChristmasCore extends JavaPlugin {
         ChristmasCreator.getInstance();
 
         ChristmasCreator.getInstance().registerPhase(new TreePhase());
+        ChristmasCreator.getInstance().registerPhase(new ParticlePhase());
     }
 
     @Override
